@@ -1,0 +1,15 @@
+//JavaScript Code (in script.js file):The JavaScript code uses the Date object to get the current time and updates the hour, minute, and second elements every second using the setInterval function.
+The padStart method is used to add leading zeros to the hour, minute, and second values if they are less than 10
+
+1function updateClock() {
+2	const currentTime = new Date();
+3	const hour = currentTime.getHours();
+4	const minute = currentTime.getMinutes();
+5	const second = currentTime.getSeconds();
+6
+7	document.getElementById("hour").innerHTML = hour.toString().padStart(2, "0");
+8	document.getElementById("minute").innerHTML = minute.toString().padStart(2, "0");
+9	document.getElementById("second").innerHTML = second.toString().padStart(2, "0");
+10}
+11
+12setInterval(updateClock, 1000);
